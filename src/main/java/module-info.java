@@ -1,4 +1,4 @@
-module com.example.invetorysystem {
+module InvetoryApp {
     requires javafx.controls;
     requires javafx.fxml;
 
