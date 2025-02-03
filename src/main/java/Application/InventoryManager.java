@@ -8,14 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InvetoryManager extends Application {
+public class InventoryManager extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(InvetoryManager.class.getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(InventoryManager.class.getResource("sample.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.setTitle("InvetoryManager");
-        Image icon = new Image("InvetoryIcon.png");
+        stage.setTitle("InventoryManager");
+        Image icon = new Image("InventoryIcon.png");
         stage.getIcons().add(icon);
 
         stage.setMaximized(true);
