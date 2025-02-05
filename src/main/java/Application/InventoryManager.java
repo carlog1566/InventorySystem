@@ -1,7 +1,9 @@
 package Application;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -9,18 +11,28 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class InventoryManager extends Application {
+    private static Stage stg;
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(InventoryManager.class.getResource("sample.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+    public void start(Stage primaryStage) throws IOException {
+        stg = primaryStage;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Application/LoginScene/LoginScene.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
 
-        stage.setTitle("InventoryManager");
+
+        primaryStage.setTitle("InventoryManager");
         Image icon = new Image("InventoryIcon.png");
-        stage.getIcons().add(icon);
+        primaryStage.getIcons().add(icon);
 
-        stage.setMaximized(true);
-        stage.setScene(scene);
-        stage.show();
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void changeScene(String fxml) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+        Parent pane = loader.load();
+        stg.getScene().setRoot(pane);
     }
 
     public static void main(String[] args) {
