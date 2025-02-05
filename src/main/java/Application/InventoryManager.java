@@ -25,8 +25,26 @@ public class InventoryManager extends Application {
         Image icon = new Image("InventoryIcon.png");
         primaryStage.getIcons().add(icon);
 
+        primaryStage.setMaximized(true);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        primaryStage.widthProperty().addListener((o, oldValue, newValue)->{
+            if(newValue.intValue() < 600.0) {
+                primaryStage.setResizable(false);
+                primaryStage.setWidth(600);
+                primaryStage.setResizable(true);
+            }
+        });
+
+        primaryStage.heightProperty().addListener((o, oldValue, newValue)->{
+            if(newValue.intValue() < 400.0) {
+                primaryStage.setResizable(false);
+                primaryStage.setHeight(400);
+                primaryStage.setResizable(true);
+            }
+        });
+
     }
 
     public void changeScene(String fxml) throws IOException {

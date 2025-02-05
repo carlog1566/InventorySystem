@@ -12,12 +12,12 @@
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="216.0" style="-fx-background-color: #0e1111;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutY="14.0" prefHeight="55.0" prefWidth="216.0" text="Inventory" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="90.0" prefHeight="55.0" prefWidth="216.0" text="Inventory" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="35.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutY="69.0" prefHeight="55.0" prefWidth="216.0" text="Manager" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="145.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="216.0" text="Manager" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="35.0" />
                </font>
@@ -26,7 +26,7 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="397.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="397.0" prefWidth="378.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="69.0" layoutY="177.0" text="Username:" textFill="WHITE">
                <font>
