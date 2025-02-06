@@ -1,7 +1,6 @@
 package Application;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -29,17 +28,17 @@ public class InventoryManager extends Application {
         primaryStage.show();
 
         primaryStage.widthProperty().addListener((o, oldValue, newValue)->{
-            if(newValue.intValue() < 600.0) {
+            if(newValue.intValue() < 1550.0) {
                 primaryStage.setResizable(false);
-                primaryStage.setWidth(600);
+                primaryStage.setWidth(1550);
                 primaryStage.setResizable(true);
             }
         });
 
         primaryStage.heightProperty().addListener((o, oldValue, newValue)->{
-            if(newValue.intValue() < 400.0) {
+            if(newValue.intValue() < 600.0) {
                 primaryStage.setResizable(false);
-                primaryStage.setHeight(400);
+                primaryStage.setHeight(600);
                 primaryStage.setResizable(true);
             }
         });
