@@ -24,6 +24,7 @@ public class InventoryManager extends Application {
         Image icon = new Image("InventoryIcon.png");
         primaryStage.getIcons().add(icon);
 
+        primaryStage.setMaximized(true);
         primaryStage.setScene(scene);
         primaryStage.show();
 
