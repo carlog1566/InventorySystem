@@ -24,11 +24,12 @@ public class InventoryManager extends Application {
         Image icon = new Image("InventoryIcon.png");
         primaryStage.getIcons().add(icon);
 
+        primaryStage.setResizable(false);
         primaryStage.setMaximized(true);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        primaryStage.widthProperty().addListener((o, oldValue, newValue)->{
+        /*primaryStage.widthProperty().addListener((o, oldValue, newValue)->{
             if(newValue.intValue() < 1550.0) {
                 primaryStage.setResizable(false);
                 primaryStage.setWidth(1550);
@@ -42,7 +43,7 @@ public class InventoryManager extends Application {
                 primaryStage.setHeight(600);
                 primaryStage.setResizable(true);
             }
-        });
+        });*/
 
     }
 

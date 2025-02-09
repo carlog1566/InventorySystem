@@ -1,5 +1,6 @@
-package Application;
+package Application.Controllers;
 
+import Application.InventoryManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
