@@ -28,7 +28,7 @@ public class LoginSceneController {
         InventoryManager m = new InventoryManager();
         if(username.getText().equals("username") && password.getText().equals("password")) {
             wrongLogIn.setText("Success!");
-            m.changeScene("/Application/DashboardScene/Dashboard.fxml");
+            m.changeScene("/Application/DashboardScene/Dashboard.fxml", "application.css");
         }
         else if (username.getText().isEmpty() || password.getText().isEmpty()){
             wrongLogIn.setText("Please Enter Your Username and or Password.");

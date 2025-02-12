@@ -17,6 +17,6 @@ public class DashboardSceneController {
 
     private void signOut() throws IOException {
         InventoryManager m = new InventoryManager();
-        m.changeScene("/Application/LoginScene/LoginScene.fxml");
+        m.changeScene("/Application/LoginScene/LoginScene.fxml", "application.css");
     }
 }

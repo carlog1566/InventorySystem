@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class InventoryManager extends Application {
     private static Stage stg;
+    private static Scene scn;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -18,11 +19,13 @@ public class InventoryManager extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Application/LoginScene/LoginScene.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-
+        scn = scene;
+        scene.getStylesheets().add(getClass().getResource("/Application/application.css").toExternalForm());
 
         primaryStage.setTitle("InventoryManager");
         Image icon = new Image("InventoryIcon.png");
         primaryStage.getIcons().add(icon);
+
 
         primaryStage.setResizable(false);
         primaryStage.setMaximized(true);
@@ -47,10 +50,12 @@ public class InventoryManager extends Application {
 
     }
 
-    public void changeScene(String fxml) throws IOException {
+    public void changeScene(String fxml, String css) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
         Parent pane = loader.load();
-        stg.getScene().setRoot(pane);
+        scn.getStylesheets().add(getClass().getResource("/Application/" + css).toExternalForm());
+        scn.setRoot(pane);
+        stg.setScene(scn);
     }
 
     public static void main(String[] args) {
